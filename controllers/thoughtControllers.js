@@ -62,8 +62,6 @@ module.exports = {
         try {
             const deletedThought = await Thought.findOneAndDelete(
                 { _id: req.params.id },
-                { $pull: { reactions: req.body } },
-                { runValidators: true, new: true }
             );
             res.status(200).json(deletedThought);
         } catch (err) {
@@ -90,8 +88,8 @@ module.exports = {
         try {
             const deletedReaction = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
-                { $pull: { reactions: { reactionId: req.params.reactionId } } },
-                { new: true }
+                { $pull: { reactions: req.body } },
+                { runValidators: true, new: true }
             );
             res.status(200).json(deletedReaction);
         } catch (err) {
