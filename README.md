@@ -1,6 +1,6 @@
 # Social-Network-API
 https://github.com/zestnachow/Social-Network-API \
-Walkthrough video link: 
+Walkthrough video link: https://drive.google.com/file/d/1kOP_QSKTv-sIvLKKMfWD58nZTtr7Gip8/view
 # Description
 This application gives users a basic API for a hypothetical social media site. MongoDB is utilized for database management and API routes allow for easy retrieval and modification of data.
 # Table of Contents
