@@ -61,7 +61,9 @@ module.exports = {
     deleteThought: async (req, res) => {
         try {
             const deletedThought = await Thought.findOneAndDelete(
-                { _id: req.params.id }
+                { _id: req.params.id },
+                { $pull: { reactions: req.body } },
+                { runValidators: true, new: true }
             );
             res.status(200).json(deletedThought);
         } catch (err) {
