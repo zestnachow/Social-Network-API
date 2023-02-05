@@ -88,7 +88,7 @@ module.exports = {
         try {
             const deletedReaction = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
-                { $pull: { reactions: req.body } },
+                { $pull: { reactions: { reactionId: req.params.reactionId} } },
                 { runValidators: true, new: true }
             );
             res.status(200).json(deletedReaction);
