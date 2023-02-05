@@ -7,7 +7,6 @@ This application gives users a basic API for a hypothetical social media site. M
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-
 * [Tests](#test)
 * [Credits](#credits)
 * [Questions](#questions)
